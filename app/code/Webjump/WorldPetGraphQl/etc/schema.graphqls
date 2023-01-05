@@ -1,0 +1,49 @@
+type Query {
+    MyPetKind  : PetKindOutput @resolver(class:"Webjump\\WorldPetGraphQl\\Model\\Resolver\\ListPetKind")
+    myGetPetKind (entity_id:Int) : getPetKindOutput @resolver(class:"Webjump\\WorldPetGraphQl\\Model\\Resolver\\GetPetKind")
+}
+
+type Mutation {
+    mySavePetKind(pet_kind_name:String, pet_kind_description:String) : savePetKindOutput @resolver(class:"Webjump\\WorldPetGraphQl\\Model\\Resolver\\savePetKind")
+    myUpdatePetKind (entity_id:Int, pet_kind_name:String, pet_kind_description:String) : updatePetKindOutput @resolver(class:"Webjump\\WorldPetGraphQl\\Model\\Resolver\\updatePetKind")
+    myDeletePetKind (entity_id:Int) : deletePetKindOutput @resolver(class:"Webjump\\WorldPetGraphQl\\Model\\Resolver\\deletePetKind")
+}
+
+# ---PetKindOutput----
+type PetKindOutput {
+    list: [PetKind]
+}
+
+type PetKind {
+    entity_id:Int
+    pet_kind_name:String
+    pet_kind_description:String
+}
+
+# --getPetKindOutput---
+type getPetKindOutput {
+    pet_kind_name:String
+    pet_kind_description:String
+}
+
+# --savePetKindOutput---
+type savePetKindOutput {
+    pet_kind_name:String
+    pet_kind_description:String
+}
+
+# --updatePetKindOutput---
+type updatePetKindOutput {
+    entity_id:Int
+    pet_kind_name:String
+    pet_kind_description:String
+}
+
+# --deletePetKindOutput---
+type deletePetKindOutput {
+    response: String
+}
+
+
+
+

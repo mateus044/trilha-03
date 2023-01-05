@@ -1,0 +1,19 @@
+{
+    "pet_kind_table": {
+        "column": {
+            "entity_id": true,
+            "pet_kind_name": true,
+            "pet_kind_description": true,
+            "created_at": true
+        },
+        "index": {
+            "PET_KIND_TABLE_ENTITY_ID": true,
+            "PET_KIND_TABLE_PET_KIND_NAME": true,
+            "PET_KIND_TABLE_PET_KIND_DESCRIPTION": true,
+            "PET_KIND_TABLE_CREATED_AT": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

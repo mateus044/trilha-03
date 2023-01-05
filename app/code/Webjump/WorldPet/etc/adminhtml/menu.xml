@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Webjump_WorldPet::pet_kind"
+             title="PetKind"
+             translate="title"
+             module="Webjump_WorldPet"
+             sortOrder="15"
+             resource="Webjump_WorldPet::pet_kind"/>
+
+        <add id="Webjump_WorldPet::pet_operation"
+             title="Operations"
+             translate="title"
+             module="Webjump_WorldPet"
+             sortOrder="10"
+             parent="Webjump_WorldPet::pet_kind"
+             resource="Webjump_WorldPet::pet_operation" />
+
+        <add id="Webjump_WorldPet::pet_kind_save"
+             title="Manage PetKind"
+             translate="title"
+             module="Magento_Sales"
+             sortOrder="10"
+             parent="Webjump_WorldPet::pet_operation"
+             action="uiexample/index/index"
+             resource="Webjump_WorldPet::pet_kind_save"/>
+    </menu>
+</config>

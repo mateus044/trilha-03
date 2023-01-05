@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/getPetKind" method="POST">
+        <service class="Webjump\WorldPet\Api\PetKindManagerInterface" method="managePetSearch"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <route url="/V1/listPetKind" method="POST">
+        <service class="Webjump\WorldPet\Api\PetKindManagerInterface" method="manageGetListPetKind"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <route url="/V1/savePetKind" method="POST">
+        <service class="Webjump\WorldPet\Api\PetKindManagerInterface" method="manageSavePetKind"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <route url="/V1/updatePetKind" method="POST">
+        <service class="Webjump\WorldPet\Api\PetKindManagerInterface" method="manageUpdatePetKind"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <route url="/V1/deletePetKind" method="POST">
+        <service class="Webjump\WorldPet\Api\PetKindManagerInterface" method="deletePetKind"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
